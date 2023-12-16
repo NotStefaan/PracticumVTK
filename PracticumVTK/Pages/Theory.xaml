@@ -1,0 +1,70 @@
+﻿<Page x:Class="PracticumVTK.Pages.Theory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Theory">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48">
+            <Grid Width="946" Height="661">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                    
+                <!--1 btn-->
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <Button x:Name="Intro_theory_btn" Click="Intro_theory_btn_Click" materialDesign:ButtonAssist.CornerRadius="40" Width="277" Height="272" Background="#E9DDFF" BorderBrush="#E9DDFF">
+                        <materialDesign:PackIcon Kind="BookAdd" Width="142" Height="140" Foreground="#6750A4"/>
+                    </Button>
+                    <TextBlock Text="Введение" FontSize="30" FontFamily="Roboto" FontWeight="Medium" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <!--2 btn-->
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <Button x:Name="Variables_theory_btn" Click="Variables_theory_btn_Click" materialDesign:ButtonAssist.CornerRadius="40" Width="277" Height="272" Background="#E9DDFF" BorderBrush="#E9DDFF">
+                        <materialDesign:PackIcon Kind="VariableBox" Width="142" Height="140" Foreground="#6750A4"/>
+                    </Button>
+                    <TextBlock Text="Переменные" FontSize="30" FontFamily="Roboto" FontWeight="Medium" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <!--3 btn-->
+                <StackPanel Grid.Row="0" Grid.Column="1">
+                    <Button x:Name="TypesOfValues_theory_btn" Click="TypesOfValues_theory_btn_Click" materialDesign:ButtonAssist.CornerRadius="40" Width="277" Height="272" Background="#E9DDFF" BorderBrush="#E9DDFF">
+                        <materialDesign:PackIcon Kind="Collection" Width="142" Height="140" Foreground="#6750A4"/>
+                    </Button>
+                    <TextBlock Text="Типы данных" FontSize="30" FontFamily="Roboto" FontWeight="Medium" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <!--4 btn-->
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <Button x:Name="Operations_theory_btn" Click="Operations_theory_btn_Click" materialDesign:ButtonAssist.CornerRadius="40" Width="277" Height="272" Background="#E9DDFF" BorderBrush="#E9DDFF">
+                        <materialDesign:PackIcon Kind="PlusMinus" Width="142" Height="140" Foreground="#6750A4"/>
+                    </Button>
+                    <TextBlock Text="Операции" FontSize="30" FontFamily="Roboto" FontWeight="Medium" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <!--5 btn-->
+                <StackPanel Grid.Row="0" Grid.Column="2">
+                    <Button x:Name="Convert_types_theory" Click="Convert_types_theory_Click" materialDesign:ButtonAssist.CornerRadius="40" Width="277" Height="272" Background="#E9DDFF" BorderBrush="#E9DDFF">
+                        <materialDesign:PackIcon Kind="Exchange" Width="142" Height="140" Foreground="#6750A4"/>
+                    </Button>
+                    <TextBlock Text="Преобразование типов" FontSize="29" FontFamily="Roboto" FontWeight="Medium" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <!--6 btn-->
+                <StackPanel Grid.Row="2" Grid.Column="2">
+                    <Button x:Name="Cycles_theory_btn" Click="Cycles_theory_btn_Click" materialDesign:ButtonAssist.CornerRadius="40" Width="277" Height="272" Background="#E9DDFF" BorderBrush="#E9DDFF">
+                        <materialDesign:PackIcon Kind="InfinityBox" Width="142" Height="140" Foreground="#6750A4"/>
+                    </Button>
+                    <TextBlock Text="Циклы" FontSize="29" FontFamily="Roboto" FontWeight="Medium" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

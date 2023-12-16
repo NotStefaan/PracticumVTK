@@ -1,0 +1,343 @@
+﻿<Page x:Class="PracticumVTK.Pages.Operations"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Operations">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48" Cursor="">
+            <ScrollViewer Margin="0 40">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource Zagalovok_style}" Text="Арифметические операции языка C#"/>
+                    <TextBlock Style="{StaticResource Under_zglvck}" Text="int z = x + 12;"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        В C# используется большинство операций, которые применяются и в других языках программирования. Операции представляют определенные действия над операндами - участниками операции. В качестве операнда может выступать переменной или какое-либо значение (например, число). Операции бывают унарными (выполняются над одним операндом), бинарными - над двумя операндами и тернарными - выполняются над тремя операндами. Рассмотрим все виды операций.
+<LineBreak/>
+Бинарные арифметические операции:
+                    </TextBlock>
+                    
+                    <!--plus-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="+" FontWeight="Black"/>
+                        <LineBreak/>
+                        <Run Text="Операция сложения двух чисел:"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="x = 10;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="z = x + 12;"/>
+                                    <Run Text="   //22" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--minus-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="-" FontWeight="Black"/>
+                        <LineBreak/>
+                        <Run Text="Операция вычитания двух чисел:"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="x = 10;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="z = x - 6;"/>
+                                    <Run Text="   // 4" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--multiplie-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="*" FontWeight="Black"/>
+                        <LineBreak/>
+                        <Run Text="Операция умножения двух чисел:"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="x = 10;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="z = x * 5;"/>
+                                    <Run Text="   // 50" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--division-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="/" FontWeight="Black"/>
+                        <LineBreak/>
+                        <Run Text="Операция деления двух чисел:"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="x = 10;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="z = x / 5;"/>
+                                    <Run Text="   // 2" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="a = 10;"/>
+                                    <LineBreak/>
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="b = 3;"/>
+                                    <LineBreak/>
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="c = a / b;"/>
+                                    <Run Text=" // 3.33333333" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="При делении стоит учитывать, что если оба операнда представляют целые числа, то результат также будет округляться до целого числа:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="z = 10 / 4;"/>
+                                    <Run Text="   // 2" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Несмотря на то, что результат операции в итоге помещается в переменную типа double, которая позволяет сохранить дробную часть, но в самой операции участвуют два литерала, которые по умолчанию рассматриваются как объекты int, то есть целые числа, и результат то же будет целочисленный.
+Для выхода из этой ситуации необходимо определять литералы или переменные, участвующие в операции, именно как типы double или float:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="z = 10.0 / 4.0;"/>
+                                    <Run Text="   // 2.5" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--division %-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="%" FontWeight="Black"/>
+                        <LineBreak/>
+                        <Run Text="Операция получение остатка от целочисленного деления двух чисел:"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="x = 10.0;"/>
+                                    <LineBreak/>
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="z = x % 4.0;"/>
+                                    <Run Text="   // 2" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Text="Также есть ряд унарных операций, в которых принимает участие один операнд:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--increment-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="++" FontWeight="Black"/>
+                        <LineBreak/>
+                        <Run Text="Операция инкремента"/>
+                        <LineBreak/>
+                        <Run Text="Инкремент бывает префиксным: ++x - сначала значение переменной x увеличивается на 1, а потом ее значение возвращается в качестве результата операции."/>
+                        <LineBreak/>
+                        <Run Text="И также существует постфиксный инкремент: x++ - сначала значение переменной x возвращается в качестве результата операции, а затем к нему прибавляется 1."/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="x1 = 5;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="z1 = ++x1;"/>
+                                    <Run Text="   // z1=6; x1=6" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;{x1} - {z1}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="x2 = 5;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="z2 = x2++;"/>
+                                    <Run Text="   // z2=5; x2=6" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="&quot;{x2} - {z2}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--minus increment-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="--" FontWeight="Black"/>
+                        <LineBreak/>
+                        <Run Text="Операция декремента или уменьшения значения на единицу. Также существует префиксная форма декремента (--x) и постфиксная (x--)."/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="x1 = 5;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="z1 = --x1;"/>
+                                    <Run Text="   // z1=4; x1=4" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;{x1} - {z1}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="x2 = 5;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="z2 = x2--;"/>
+                                    <Run Text="   // z2=5; x2=4" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;{x2} - {z2}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        При выполнении сразу нескольких арифметических операций следует учитывать порядок их выполнения. Приоритет операций от наивысшего к низшему:
+<LineBreak/>
+1) Инкремент, декремент
+<LineBreak/>
+2)Умножение, деление, получение остатка
+<LineBreak/>
+3)Сложение, вычитание
+<LineBreak/>
+Для изменения порядка следования операций применяются скобки.
+<LineBreak/>
+Рассмотрим набор операций:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="a = 3;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = 5;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="c = 40;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="d = c---b*a;"/>
+                                    <Run Text="   // a=3 b=5 c=39 d=25" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;a={a} b={b} c={c} d={d}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Text="Здесь мы имеем дело с тремя операциями: декремент, вычитание и умножение. Сначала выполняется декремент переменной c, затем умножение b*a, и в конце вычитание. То есть фактически набор операций выглядел так:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="d = (c--)-(b*a);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    
+                    <TextBlock Text="Но с помощью скобок мы могли бы изменить порядок операций, например, следующим образом:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="a = 3;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = 5;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="c = 40;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="d = (c-(--b))*a;"/>
+                                    <Run Text="   // a=3 b=4 c=40 d=108" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;a={a} b={b} c={c} d={d}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Back_btn_Operation" Click="Back_btn_Operation_Click" HorizontalAlignment="Left" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                            <materialDesign:PackIcon Kind="ArrowBack" Width="50" Height="80"/>
+                        </Button>
+                        <Button x:Name="Next_btn_Operation" Click="Next_btn_Operation_Click" HorizontalAlignment="Right" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="740 20">
+                            <materialDesign:PackIcon Kind="ArrowRight" Width="50" Height="80"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

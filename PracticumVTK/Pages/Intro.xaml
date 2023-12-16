@@ -1,0 +1,35 @@
+﻿<Page x:Class="PracticumVTK.Pages.Intro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Intro">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48">
+            <ScrollViewer materialDesign:ScrollBarAssist.ThumbCornerRadius="20" Margin="0 40">
+                <StackPanel>
+                    <TextBlock Text="Введение в C#" FontFamily="Roboto" FontSize="53" FontWeight="Medium" Margin="40 0"/>
+                    <TextBlock Foreground="#6750A4" Text="Введение в C#" FontFamily="Roboto" FontSize="40" FontWeight="Medium" Margin="40 0"/>
+                    <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                        На сегодняшний момент язык программирования C# один из самых мощных, <LineBreak />быстро развивающихся и востребованных языков в ИТ-отрасли. В настоящий <LineBreak /> момент на нем пишутся самые различные приложения: от небольших<LineBreak /> десктопных программок до крупных веб-порталов и веб-сервисов,<LineBreak /> обслуживающих ежедневно миллионы пользователей.
+C# уже не молодой язык<LineBreak /> и как и вся платформа .NET уже прошел большой путь. Первая версия языка<LineBreak /> вышла вместе с релизом Microsoft Visual Studio .NET в феврале 2002 года.<LineBreak /> Текущей версией языка является версия C# 12, которая вышла 14 ноября 2023<LineBreak /> года вместе с релизом .NET 8.
+C# является языком с Си-подобным синтаксисом<LineBreak /> и близок в этом отношении к C++ и Java. Поэтому, если вы знакомы с одним из<LineBreak /> этих языков, то овладеть C# будет легче.
+C# является объектно - <LineBreak />ориентированным и в этом плане много перенял у Java и С++. Например, C#<LineBreak /> поддерживает полиморфизм, наследование, перегрузку операторов,<LineBreak /> статическую типизацию. Объектно-ориентированный подход позволяет решить<LineBreak /> задачи по построению крупных, но в тоже время гибких, масштабируемых и<LineBreak /> расширяемых приложений. И C# продолжает активно развиваться, и с каждой<LineBreak /> новой версией появляется все больше интересных функциональностей.
+                       <LineBreak />Когда говорят C#, нередко имеют в виду технологии платформы .NET<LineBreak /> (Windows Forms, WPF, ASP.NET, .NET MAUI). И, наоборот, когда говорят .NET,<LineBreak /> нередко имеют в виду C#. Однако, хотя эти понятия связаны, отождествлять их<LineBreak /> неверно. Язык C# был создан специально для работы с фреймворком .NET,<LineBreak /> однако само понятие .NET несколько шире.
+Как-то Билл Гейтс сказал, что<LineBreak /> платформа .NET - это лучшее, что создала компания Microsoft. Возможно, он был<LineBreak /> прав. Фреймворк .NET представляет мощную платформу для создания<LineBreak /> приложений.
+                    </TextBlock>
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Button x:Name="Next_btn_intro" Click="Next_btn_intro_Click"  Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20" Cursor="Hand">
+                            <materialDesign:PackIcon Kind="ArrowRight" Width="50" Height="80"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

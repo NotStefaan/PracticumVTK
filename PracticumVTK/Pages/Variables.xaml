@@ -1,0 +1,235 @@
+﻿<Page x:Class="PracticumVTK.Pages.Variables"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Variables">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48">
+            <ScrollViewer Margin="0 40">
+                <StackPanel>
+                    <TextBlock Text="Переменные и константы" FontFamily="Roboto" FontSize="53" FontWeight="Medium" Margin="40 0"/>
+                    <TextBlock Foreground="#6750A4" Text="string name = Tom;" FontFamily="Roboto" FontSize="40" FontWeight="Medium" Margin="40 0"/>
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                    Для хранения данных в программе применяются переменные. Переменная представляет именнованную область памяти, в которой хранится значение определенного типа. Переменная имеет тип, имя и значение. Тип определяет, какого рода информацию может хранить переменная.
+Перед использованием любую переменную надо определить. Синтаксис определения переменной выглядит следующим образом:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="Тип" Foreground="Blue"/>
+                                    <Run Text="имя_переменной"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                    Вначале идет тип переменной, потом ее имя. В качестве имени переменной может выступать любое произвольное название, которое удовлетворяет следующим требованиям:<LineBreak />
+-имя может содержать любые цифры, буквы и символ подчеркивания, при этом первый символ в имени должен быть буквой или символом подчеркивания;
+<LineBreak />-в имени не должно быть знаков пунктуации и пробелов;
+<LineBreak />имя не может быть ключевым словом языка C#. Таких слов не так много, и при работе в Visual Studio среда разработки подсвечивает ключевые слова синим цветом;
+<LineBreak />Хотя имя переменой может быть любым, но следует давать переменным описательные имена, которые будут говорить об их предназначении.
+Например, определим простейшую переменную:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="name;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+В данном случае определена переменная name, которая имеет тип string. то есть переменная представляет строку. Поскольку определение переменной представляет собой инструкцию, то после него ставится точка с запятой. <LineBreak/>
+При этом следует учитывать, что C# является регистрозависимым языком, поэтому следующие два определения переменных будут представлять две разные переменные:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="name;"/>
+                                    <LineBreak/>
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="Name;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                        После определения переменной можно присвоить некоторое значение:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="name;"/>
+                                    <LineBreak/>
+                                    <Run Text="name"/>
+                                    <Run Text="Tom;" Foreground="Red"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                        Так как переменная name представляет тип string, то есть строку, то мы можем присвоить ей строку в двойных кавычках. Причем переменной можно присвоить только то значение, которое соответствует ее типу.
+<LineBreak/>
+В дальнейшем с помощью имени переменной мы сможем обращаться к той области памяти, в которой хранится ее значение.
+<LineBreak/>
+Также мы можем сразу при определении присвоить переменной значение. Данный прием называется инициализацией:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="name"/>
+                                    <Run Text="="/>
+                                    <Run Text="Tom;" Foreground="Red"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                       Отличительной чертой переменных является то, что в программе можно многократно менять их значение. Например, создадим небольшую программу, в которой определим переменную, поменяем ее значение и выведем его на консоль:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="name"/>
+                                    <Run Text="="/>
+                                    <Run Text="Tom;" Foreground="Red"/>
+                                    <Run Text="// определяем переменную и инициализируем ее" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine(name);"/>
+                                    <Run Text="// Tom" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="name"/>
+                                    <Run Text="="/>
+                                    <Run Text="Bob;" Foreground="Red"/>
+                                    <Run Text="// меняем значение переменной" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine(name);"/>
+                                    <Run Text="// Bob" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                       Консольный вывод программы:
+                    </TextBlock>
+                    <!--Console-->
+                    <Border Margin="20 0" Background="Black">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderBrush="White">
+                                <TextBlock Foreground="White" FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="Tom"/>
+                                    <LineBreak/>
+                                    <Run Text="Bob"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock FontFamily="Roboto" FontSize="36" FontWeight="Medium" Margin="40 20" Text="Константы" />
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                        Отличительной особенностью переменных является то, что мы можем изменить их значение в процессе работы программы. Но, кроме того, в C# есть константы. Константа должна быть обязательно инициализирована при определении, и после определения значение константы не может быть изменено
+                        <LineBreak/>
+                        Константы предназначены для описания таких значений, которые не должны изменяться в программе. Для определения констант используется ключевое слово const, которое указывается перед типом константы:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="const string" Foreground="Blue"/>
+                                    <Run Text="NAME"/>
+                                    <Run Text="="/>
+                                    <Run Text="Tom;" Foreground="Red"/>
+                                    <Run Text="// определяем константу;" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+Так, в данном случае определена константа NAME, которая хранит строку "Tom". Нередко для название констант используется верхний регистр, но это не более чем условность.
+<LineBreak />
+При использовании констант надо помнить, что объявить мы их можем только один раз и что к моменту компиляции они должны быть определены. Так, в следующем случае мы получим ошибку, так как константе не присвоено начальное значение:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="const string" Foreground="Blue"/>
+                                    <Run Text="NAME;"/>
+                                    <Run Text="// ! Ошибка - константа NAME не инициализирована;" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                        Кроме того, мы ее не сможем изменить в процессе работы программы:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="const string" Foreground="Blue"/>
+                                    <Run Text="NAME"/>
+                                    <Run Text="="/>
+                                    <Run Text="Tom;" Foreground="Red"/>
+                                    <Run Text="// определяем константу;" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="NAME = "/>
+                                    <Run Text="Bob;" Foreground="Red"/>
+                                    <Run Text="// !Ошибка - у констаты нельзя изменить значение" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock TextWrapping="Wrap" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                        Таким образом, если нам надо хранить в программе некоторые данные, но их не следует изменить, они определяются в виде констант. Если же их можно изменять, то они определяются в виде переменных.
+               </TextBlock>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Back_btn_variables" Click="Back_btn_variables_Click" HorizontalAlignment="Left" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                        <materialDesign:PackIcon Kind="ArrowBack" Width="50" Height="80"/>
+                    </Button>
+                    <Button x:Name="Next_btn_variables" Click="Next_btn_variables_Click" HorizontalAlignment="Right" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="740 20">
+                        <materialDesign:PackIcon Kind="ArrowRight" Width="50" Height="80"/>
+                    </Button>
+                </StackPanel>
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

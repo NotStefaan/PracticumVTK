@@ -1,0 +1,101 @@
+﻿<Page x:Class="PracticumVTK.Pages.Variables_practice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Variables_practice">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48">
+            <ScrollViewer Margin="0 40">
+                <StackPanel>
+                    <TextBlock Text="Переменные и константы" FontFamily="Roboto" FontSize="53" FontWeight="Medium" Margin="40 0"/>
+                    <TextBlock Foreground="#6750A4" Text="string name = Tom;" FontFamily="Roboto" FontSize="40" FontWeight="Medium" Margin="40 0"/>
+                    
+                    <!--question1-->
+                    <TextBlock Text="Вопрос 1" FontSize="36" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBlock Text="Пример вопроса 1?"  Margin="40 -10" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 30" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="name = &quot;Tom&quot;;"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine(Name);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    
+                    <!--radiobuttons-->
+                    <StackPanel Margin="20 -10">
+                        <RadioButton GroupName="Question1" Content="1" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question1" Content="2" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question1" Content="3" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question1" Content="4" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                    </StackPanel>
+                    
+
+                    <!--question2-->
+                    <TextBlock Text="Вопрос 2" FontSize="36" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBlock Text="Пример вопроса 1?" Margin="40 -10" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 30" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="person = &quot;Tom&quot;;"/>
+                                    <LineBreak/>
+                                    <Run Text="person = &quot;Sam&quot;;"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine(person);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <!--radiobuttons-->
+                    <StackPanel Margin="20 -10">
+                        <RadioButton GroupName="Question2" Content="1" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question2" Content="2" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question2" Content="3" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question2" Content="4" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                    </StackPanel>
+
+                    <!--question3-->
+                    <TextBlock Text="Вопрос 3" FontSize="36" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBlock Text="Пример вопроса 1?" Margin="40 -10" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 30" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="person = &quot;Tom&quot;;"/>
+                                    <LineBreak/>
+                                    <Run Text="person = &quot;Sam&quot;;"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine(person);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <!--radiobuttons-->
+                    <StackPanel Margin="20 -10">
+                        <RadioButton GroupName="Question3" Content="1" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question3" Content="2" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question3" Content="3" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                        <RadioButton GroupName="Question3" Content="4" FontFamily="Roboto" FontSize="20" FontWeight="Medium"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

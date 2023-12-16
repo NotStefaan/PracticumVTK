@@ -1,0 +1,599 @@
+﻿<Page x:Class="PracticumVTK.Pages.Cycles"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Cycles">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48">
+            <ScrollViewer Margin="0 40">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource Zagalovok_style}" Text="Циклы"/>
+                    <TextBlock Style="{StaticResource Under_zglvck}" Text="do...while"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Циклы являются управляющими конструкциями, позволяя в зависимости от определенных условий выполнять некоторое действие множество раз. В C# имеются следующие виды циклов:
+<LineBreak/>
+for
+<LineBreak/>
+foreach
+<LineBreak/>
+while
+<LineBreak/>
+do...while
+                    </TextBlock>
+                    
+                    <!--for-->
+                    <TextBlock Text="Цикл for" Style="{StaticResource CustomTextBlockStyle}" FontSize="36"/>
+                    <TextBlock Text="Цикл for имеет следующее формальное определение:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="for" Foreground="Blue"/>
+                                    <Run Text="([действия_до_выполнения_цикла]; [условие]; [действия_после_выполнения])"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    // действия" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Объявление цикла for состоит из трех частей. Первая часть объявления цикла - некоторые действия, которые выполняются один раз до выполнения цикла. Обычно здесь определяются переменные, которые будут использоваться в цикле.
+<LineBreak/>
+Вторая часть - условие, при котором будет выполняться цикл. Пока условие равно true, будет выполняться цикл.
+<LineBreak/>
+И третья часть - некоторые действия, которые выполняются после завершения блока цикла. Эти действия выполняются каждый раз при завершении блока цикла.
+<LineBreak/>
+После объявления цикла в фигурных скобках помещаются сами действия цикла.
+<LineBreak/>
+Рассмотрим стандартный цикл for:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="for" Foreground="Blue"/>
+                                    <Run Text="("/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = 1; i ❮ 4; i++)"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine(i);"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                     Здесь первая часть объявления цикла - int i = 1 - создает и инициализирует переменную i.
+
+Вторая часть - условие i ❮ 4. То есть пока переменная i меньше 4, будет выполняться цикл.
+И третья часть - действия, выполняемые после завершения действий из блока цикла - увеличение переменной i на единицу.
+Весь процесс цикла можно представить следующим образом:
+<LineBreak/>
+Определяется переменная int i = 1
+<LineBreak/>
+Проверяется условие i ❮ 4. Оно истинно (так как 1 меньше 4), поэтому выполняется блок цикла, а именно инструкция Console.WriteLine(i), которая выводит на консоль значение переменной i
+<LineBreak/>
+Блок цикла закончил выполнение, поэтому выполняется треться часть объявления цикла - i++. После этого переменная i будет равна 2.
+<LineBreak/>
+Снова проверяется условие i ❮ 4. Оно истинно (так как 2 меньше 4), поэтому опять выполняется блок цикла - Console.WriteLine(i)
+<LineBreak/>
+Блок цикла закончил выполнение, поэтому снова выполняется выражение i++. После этого переменная i будет равна 3.
+<LineBreak/>
+Снова проверяется условие i ❮ 4. Оно истинно (так как 3 меньше 4), поэтому опять выполняется блок цикла - Console.WriteLine(i)
+<LineBreak/>
+Блок цикла закончил выполнение, поэтому снова выполняется выражение i++. После этого переменная i будет равна 4.
+<LineBreak/>
+Снова проверяется условие i ❮ 4. Теперь оно возвражает false, так как значение переменной i НЕ меньше 4, поэтому цикл завершает выполнение. Далее уже выполняется остальная часть программы, которая идет после цикла
+<LineBreak/>
+В итоге блок цикла сработает 3 раза, пока значение i не станет равным 4. И каждый раз это значение будет увеличиваться на 1. Однократное выполнение блока цикла называется итерацией. Таким образом, здесь цикл выполнит три итерации. Результат работы программы:
+                    </TextBlock>
+                    <!--Console-->
+                    <Border Margin="20 0" Background="Black">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderBrush="White">
+                                <TextBlock Foreground="White" FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="1"/>
+                                    <LineBreak/>
+                                    <Run Text="2"/>
+                                    <LineBreak/>
+                                    <Run Text="3"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Text="Если блок цикла for содержит одну инструкцию, то мы можем его сократить, убрав фигурные свобки:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="for" Foreground="Blue"/>
+                                    <Run Text="("/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = 1; i ❮ 4; i++)"/>
+                                    <LineBreak/>
+                                    <Run Text="    Console.WriteLine(i);"/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <Run Text="// или так" Foreground="Green"/>
+                                    <LineBreak/>
+                                     <Run Text="for" Foreground="Blue"/>
+                                     <Run Text="("/>
+                                     <Run Text="int" Foreground="Blue"/>
+                                     <Run Text="i = 1; i ❮ 4; i++)"/>
+                                     <Run Text="Console.WriteLine(i);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="При этом необязательно именно в первой части цикла объявлять переменную, а в третий части изменять ее значение - это могут быть любые действия. Например:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="var i = 1;"/>
+                                     <LineBreak/>
+                                     <LineBreak/>
+                                     <Run Text="for" Foreground="Blue"/>
+                                     <Run Text="(Console.WriteLine(&quot;Начало выполнения цикла&quot;); i ❮ 4; Console.WriteLine($&quot;i = {i}&quot;))"/>
+                                     <LineBreak/>
+                                     <Run Text="⎨"/>
+                                     <LineBreak/>
+                                     <Run Text="i++;"/>
+                                     <LineBreak/>
+                                     <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Здесь опять же цикл срабатывает, пока переменная i меньше 4, только приращение переменной i происходит в блоке цикла. Консольный вывод данной программы:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Console-->
+                    <Border Margin="20 0" Background="Black">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderBrush="White">
+                                <TextBlock Foreground="White" FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="Начало выполнения цикла"/>
+                                    <LineBreak/>
+                                    <Run Text="i = 2"/>
+                                    <LineBreak/>
+                                    <Run Text="i = 3"/>
+                                    <LineBreak/>
+                                    <Run Text="i = 4"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Нам необязательно указывать все условия при объявлении цикла. Например, мы можем написать так:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = 1;"/>
+                                    <LineBreak/>
+                                    <Run Text="for" Foreground="Blue"/>
+                                    <Run Text="(; ;)"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($&quot;i = {i}&quot;);"/>
+                                    <LineBreak/>
+                                    <Run Text="i++;"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Формально определение цикла осталось тем же, только теперь блоки в определении у нас пустые: for (; ;). У нас нет инициализированной переменной, нет условия, поэтому цикл будет работать вечно - бесконечный цикл.
+Мы также можем опустить ряд блоков:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = 1;"/>
+                                    <LineBreak/>
+                                    <Run Text="for" Foreground="Blue"/>
+                                    <Run Text="(; i ❮ 4;)"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($&quot;i = {i}&quot;);"/>
+                                    <LineBreak/>
+                                    <Run Text="i++;"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Text="Этот пример по сути эквивалентен первому примеру: у нас также есть переменная-счетчик, только определена она вне цикла. У нас есть условие выполнения цикла. И есть приращение переменной уже в самом блоке for.
+Также стоит отметить, что можно определять несколько переменных в объявлении цикла:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="for" Foreground="Blue"/>
+                                    <Run Text="("/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="(i = 1, j = 1; i ❮ 10; i++, j++))"/>
+                                    <LineBreak/>
+                                    <Run Text="    Console.WriteLine($&quot;{i * j}&quot;);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Text="Здесь в первой части объявления цикла определяются две переменных: i и j. Цикл выполняется, пока i не будет равна 10. После каждой итерации переменые i и j увеличиваются на единицу. Консольный вывод программы:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Console-->
+                    <Border Margin="20 0" Background="Black">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderBrush="White">
+                                <TextBlock Foreground="White" FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="1"/>
+                                    <LineBreak/>
+                                    <Run Text="4"/>
+                                    <LineBreak/>
+                                    <Run Text="9"/>
+                                    <LineBreak/>
+                                    <Run Text="25"/>
+                                    <LineBreak/>
+                                    <Run Text="36"/>
+                                    <LineBreak/>
+                                    <Run Text="49"/>
+                                    <LineBreak/>
+                                    <Run Text="64"/>
+                                    <LineBreak/>
+                                    <Run Text="81"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+
+                    <!--Цикл do..while-->
+                    <TextBlock Text="Цикл do..while" Style="{StaticResource CustomTextBlockStyle}" FontSize="36"/>
+                    <TextBlock Text="В цикле do сначала выполняется код цикла, а потом происходит проверка условия в инструкции while. И пока это условие истинно, цикл повторяется." Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="do" Foreground="Blue"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    действия цикла"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                    <LineBreak/>
+                                    <Run Text="while" Foreground="Blue"/>
+                                    <Run Text="(условие)"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Например:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = 6;"/>
+                                    <LineBreak/>
+                                    <Run Text="do" Foreground="Blue"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    Console.WriteLine(i);"/>
+                                    <LineBreak/>
+                                    <Run Text="    i--;"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                    <LineBreak/>
+                                    <Run Text="while" Foreground="Blue"/>
+                                    <Run Text="(i > 0);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Здесь код цикла сработает 6 раз, пока i не станет равным нулю. Но важно отметить, что цикл do гарантирует хотя бы единократное выполнение действий, даже если условие в инструкции while не будет истинно. То есть мы можем написать::" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = -1;"/>
+                                    <LineBreak/>
+                                    <Run Text="do" Foreground="Blue"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    Console.WriteLine(i);"/>
+                                    <LineBreak/>
+                                    <Run Text="    i--;"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                    <LineBreak/>
+                                    <Run Text="while" Foreground="Blue"/>
+                                    <Run Text="(i > 0);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Хотя у нас переменная i меньше 0, цикл все равно один раз выполнится." Style="{StaticResource CustomTextBlockStyle}"/>
+
+
+                    <!--Цикл while-->
+                    <TextBlock Text="Цикл while" Style="{StaticResource CustomTextBlockStyle}" FontSize="36"/>
+                    <TextBlock Text="В отличие от цикла do цикл while сразу проверяет истинность некоторого условия, и если условие истинно, то код цикла выполняется:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="while" Foreground="Blue"/>
+                                    <Run Text="(условие)"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    действия цикла"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Например:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                     <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = 6;"/>
+                                    <Run Text="while" Foreground="Blue"/>
+                                    <Run Text="(i > 0)"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    Console.WriteLine(i);"/>
+                                    <LineBreak/>
+                                    <Run Text="    i--;"/>
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+
+                    <!--Цикл foreach-->
+                    <TextBlock Text="Цикл foreach" Style="{StaticResource CustomTextBlockStyle}" FontSize="36"/>
+                    <TextBlock Text="Цикл foreach предназначен для перебора набора или коллекции элементов. Его общее определение:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="foreach" Foreground="Blue"/>
+                                    <Run Text="(тип_данных переменная in коллекция)"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    // действия цикла" Foreground="Green"/> 
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        После оператора foreach в скобках сначала идет определение переменной. Затем ключевое слово in и далее коллекция, элементы которой надо перебрать.
+ <LineBreak/>
+При выполнении цикл последовательно перебирает элементы коллекции и помещает их в переменную, и таким образом в блоке цикла мы можем выполнить с ними некоторые действия.
+ <LineBreak/>
+Например, возьмем строку. Строка по сути - это коллекция символов. И .NET позволяет перебрать все элементы строки - ее символы с помощью цикла foreach.
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="foreach" Foreground="Blue"/>
+                                    <Run Text="("/>
+                                    <Run Text="char" Foreground="Blue"/>
+                                    <Run Text="c in $&quot;Tom$&quot;)"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    Console.WriteLine(c);"/> 
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Здесь цикл foreach пробегается по всем символам строки "Tom" и каждый символ помещает в символьную переменную c. В блоке цикла значение переменной c выводится на консоль. Поскольку в строке "Tom" три символа, то цикл выполнится три раза. Консольный вывод программы:
+                    </TextBlock>
+                    <!--Console-->
+                    <Border Margin="20 0" Background="Black">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderBrush="White">
+                                <TextBlock Foreground="White" FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="t"/>
+                                    <LineBreak/>
+                                    <Run Text="o"/>
+                                    <LineBreak/>
+                                    <Run Text="m"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Стоит отметить, что переменная, которая определяется в объявлении цикла, должна по типу соответствовать типу элементов перебираемой коллекции. Так, элементы строки - значения типа char - символы. Поэтому переменная c имеет тип char. Однако в реальности не всегда бывает очевидно, какой тип представляют элементы коллекции. В этом случае мы можем определить переменную с помощью оператора var:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="foreach" Foreground="Blue"/>
+                                    <Run Text="("/>
+                                    <Run Text="var  "/>
+                                    <Run Text="c in $&quot;Tom$&quot;)"/>
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    Console.WriteLine(c);"/> 
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+    В дальнейшем мы подробнее рассмотрим, что представляют собой коллекции в .NET и какие именно коллекции можно перебирать с помощью цикла foreach.
+                    </TextBlock>
+
+
+                    <!--Операторы continue и break-->
+                    <TextBlock Text="Операторы continue и break" Style="{StaticResource CustomTextBlockStyle}" FontSize="36"/>
+                    <TextBlock Text="Иногда возникает ситуация, когда требуется выйти из цикла, не дожидаясь его завершения. В этом случае мы можем воспользоваться оператором break.
+Например:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="for" Foreground="Blue"/>
+                                    <Run Text="("/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = 0; i ❮ 9; i++)" />
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    // действия цикла" Foreground="Green"/> 
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Хотя в условии цикла сказано, что цикл будет выполняться, пока счетчик i не достигнет значения 9, в реальности цикл сработает 5 раз. Так как при достижении счетчиком i значения 5, сработает оператор break, и цикл завершится.
+                    </TextBlock>
+                    <!--Console-->
+                    <Border Margin="20 0" Background="Black">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderBrush="White">
+                                <TextBlock Foreground="White" FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="0"/>
+                                    <LineBreak/>
+                                    <Run Text="1"/>
+                                    <LineBreak/>
+                                    <Run Text="2"/>
+                                    <LineBreak/>
+                                    <Run Text="3"/>
+                                    <LineBreak/>
+                                    <Run Text="4"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+   Теперь поставим себе другую задачу. А что если мы хотим, чтобы при проверке цикл не завершался, а просто пропускал текущую итерацию. Для этого мы можем воспользоваться оператором continue:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="for" Foreground="Blue"/>
+                                    <Run Text="("/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="i = 0; i ❮ 9; i++)" />
+                                    <LineBreak/>
+                                    <Run Text="⎨"/>
+                                    <LineBreak/>
+                                    <Run Text="    if" Foreground="Blue"/> 
+                                    <Run Text="(i == 5)"/> 
+                                    <LineBreak/>
+                                    <Run Text="        continue;" Foreground="Blue"/> 
+                                    <LineBreak/>
+                                    <Run Text="    Console.WriteLine(i);"/> 
+                                    <LineBreak/>
+                                    <Run Text="⎬"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+В этом случае цикл, когда дойдет до числа 5, которое не удовлетворяет условию проверки, просто пропустит это число и перейдет к следующей итерации:
+                    </TextBlock>
+
+                    <!--Console-->
+                    <Border Margin="20 0" Background="Black">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderBrush="White">
+                                <TextBlock Foreground="White" FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="0"/>
+                                    <LineBreak/>
+                                    <Run Text="1"/>
+                                    <LineBreak/>
+                                    <Run Text="2"/>
+                                    <LineBreak/>
+                                    <Run Text="3"/>
+                                    <LineBreak/>
+                                    <Run Text="4"/>
+                                    <LineBreak/>
+                                    <Run Text="6"/>
+                                    <LineBreak/>
+                                    <Run Text="7"/>
+                                    <LineBreak/>
+                                    <Run Text="8"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+Стоит отметить, что операторы break и continue можно применять в любом типе циклов.
+                    </TextBlock>
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Back_btn_Cycles" Click="Back_btn_Cycles_Click" HorizontalAlignment="Left" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                            <materialDesign:PackIcon Kind="ArrowBack" Width="50" Height="80"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,277 @@
+﻿<Page x:Class="PracticumVTK.Pages.Convert_types"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Convert_types">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48">
+            <ScrollViewer Margin="0 40">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource Zagalovok_style}" Text="Преобразования базовых типов данных"/>
+                    <TextBlock Style="{StaticResource Under_zglvck}" Text="byte b = (byte)(a + 70);"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                       При рассмотрении типов данных указывалось, какие значения может иметь тот или иной тип и сколько байт памяти он может занимать. В прошлой теме были расмотрены арифметические операции. Теперь применим операцию сложения к данным разных типов:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="a = 4;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = a + 70;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Text="Результатом операции вполне справедливо является число 74, как и ожидается.
+Но теперь попробуем применить сложение к двум объектам типа byte:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="a = 4;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = a + 70;"/>
+                                    <Run Text="// ошибка" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Здесь поменялся только тип переменной, которая получает результат сложения - с int на byte. Однако при попытке скомпилировать программу мы получим ошибку на этапе компиляции. И если мы работаем в Visual Studio, среда подчеркнет вторую строку красной волнистой линией, указывая, что в ней ошибка.
+<LineBreak/>
+При операциях мы должны учитывать диапазон значений, которые может хранить тот или иной тип. Но в данном случае число 74, которое мы ожидаем получить, вполне укладывается в диапазон значений типа byte, тем не менее мы получаем ошибку.
+<LineBreak/>
+Дело в том, что операция сложения (да и вычитания) возвращает значение типа int, если в операции участвуют целочисленные типы данных с разрядностью меньше или равно int (то есть типы byte, short, int). Поэтому результатом операции a + 70 будет объект, который имеет длину в памяти 4 байта. Затем этот объект мы пытаемся присвоить переменной b, которая имеет тип byte и в памяти занимает 1 байт.
+<LineBreak/>
+И чтобы выйти из этой ситуации, необходимо применить операцию преобразования типов. Операция преобразования типов предполагает указание в скобках того типа, к которому надо преобразовать значение:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                     <Run Text="(тип_данных_в_который_надо_преобразовать)значение_для_преобразования;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Text="Так, изменим предыдущий пример, применив операцию преобразования типов:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="a = 4;"/>
+                                    <LineBreak/>
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="b = (" />
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text=")(a + 70);" />
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    
+                    <!--Сужающие и расширяющие преобразования-->
+                    <TextBlock Text="Сужающие и расширяющие преобразования" Style="{StaticResource CustomTextBlockStyle}" FontSize="36"/>
+                    <TextBlock Text="Преобразования могут быть сужающие (narrowing) и расширяющие (widening). Расширяющие преобразования расширяют размер объекта в памяти. Например:" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="a = 4;"/>
+                                    <Run Text="             // 0000100" Foreground="Green"/>
+                                    <LineBreak/>
+                                     <Run Text="ushort" Foreground="Blue"/>
+                                     <Run Text="b = a;"/>
+                                     <Run Text="// 000000000000100" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="В данном случае переменной типа ushort присваивается значение типа byte. Тип byte занимает 1 байт (8 бит), и значение переменной a в двоичном виде можно представить как: 00000100"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="Значение типа ushort занимает 2 байта (16 бит). И при присвоении переменной b значение переменной a расширяется до 2 байт 	
+0000000000000100"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        То есть значение, которое занимает 8 бит, расширяется до 16 бит.
+<LineBreak/>
+Сужающие преобразования, наоборот, сужают значение до типа меньшей разядности. Во втором листинге статьи мы как раз имели дело с сужающими преобразованиями:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="ushort" Foreground="Blue"/>
+                                    <Run Text="a = 4;"/>
+                                    <LineBreak/>
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="b = ("/>
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text=") a;" />
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="Здесь переменной b, которая занимает 8 бит, присваивается значение ushort, которое занимает 16 бит. То есть из 0000000000000100 получаем 00000100. Таким образом, значение сужается с 16 бит (2 байт) до 8 бит (1 байт)."/>
+
+                    <!--Явные и неявные преобразования-->
+                    <TextBlock Text="Явные и неявные преобразования" Style="{StaticResource CustomTextBlockStyle}" FontSize="36"/>
+                    <TextBlock Text="Неявные преобразования" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        В случае с расширяющими преобразованиями компилятор за нас выполнял все преобразования данных, то есть преобразования были неявными (implicit conversion). Такие преобразования не вызывают каких-то затруднений. Тем не менее стоит сказать пару слов об общей механике подобных преобразований.
+<LineBreak/>
+Если производится преобразование от безнакового типа меньшей разрядности к безнаковому типу большой разрядности, то добавляются дополнительные биты, которые имеют значени 0. Это называется дополнение нулями или zero extension.
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="a = 4;"/>
+                                    <Run Text="             // 0000100" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="ushort" Foreground="Blue"/>
+                                    <Run Text="b = a;"/>
+                                    <Run Text="// 000000000000100" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                       Если производится преобразование к знаковому типу, то битовое представление дополняется нулями, если число положительное, и единицами, если число отрицательное. Последний разряд числа содержит знаковый бит - 0 для положительных и 1 для отрицательных чисел. При расширении в добавленные разряды компируется знаковый бит.
+<LineBreak/>
+Рассмотрим преобразование положительного числа:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="sbyte" Foreground="Blue"/>
+                                    <Run Text="a = 4;"/>
+                                    <Run Text="             // 0000100" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="short" Foreground="Blue"/>
+                                    <Run Text="b = a;"/>
+                                    <Run Text="// 000000000000100" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <Image Source="/Resources/Table_one.png"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                       Преобразование отрицательного числа:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="sbyte" Foreground="Blue"/>
+                                    <Run Text="a = -4;"/>
+                                    <Run Text="           // 1111100" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="short" Foreground="Blue"/>
+                                    <Run Text="b = a;"/>
+                                    <Run Text="    // 111111111111100" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <Image Source="/Resources/Table_two.png"/>
+
+                    <TextBlock Text="Явные преобразования" Style="{StaticResource CustomTextBlockStyle}"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        При явных преобразованиях (explicit conversion) мы сами должны применить операцию преобразования (операция ()). Суть операции преобразования типов состоит в том, что перед значением указывается в скобках тип, к которому надо привести данное значение:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="a = 4;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = 6;"/>
+                                    <LineBreak/>
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="("/>
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text=")(a+b);"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Расширяющие преобразования от типа с меньшей разрядностью к типу с большей разрядностью компилятор проводит неявно. Это могут быть следующие цепочки преобразований:
+<LineBreak/>
+byte -> short -> int -> long -> decimal
+<LineBreak/>
+int -> double
+<LineBreak/>
+short -> float -> double
+<LineBreak/>
+char -> int
+<LineBreak/>
+Все безопасные автоматические преобразования можно описать следующей таблицей:
+                    </TextBlock>
+                    <Image Width="388" Height="561" Source="/Resources/Table_convert.png"/>
+                    <Image Width="410" Height="422" Source="/Resources/2.9.png"/>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                       В остальных случаях следует использовать явные преобразования типов.
+<LineBreak/>
+Также следует отметить, что несмотря на то, что и double, и decimal могут хранить дробные данные, а decimal имеет большую разрядность, чем double, но все равно значение double нужно явно приводить к типу decimal:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="a = 4.0;"/>
+                                    <LineBreak/>
+                                    <Run Text="decimal" Foreground="Blue"/>
+                                    <Run Text="b = ("/>
+                                    <Run Text="decimal" Foreground="Blue"/>
+                                    <Run Text=")a;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Back_btn_Convert_types" Click="Back_btn_Convert_types_Click" HorizontalAlignment="Left" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                            <materialDesign:PackIcon Kind="ArrowBack" Width="50" Height="80"/>
+                        </Button>
+                        <Button x:Name="Next_btn_Convert_types" Click="Next_btn_Convert_types_Click" HorizontalAlignment="Right" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="740 20">
+                            <materialDesign:PackIcon Kind="ArrowRight" Width="50" Height="80"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,63 @@
+﻿<Page x:Class="PracticumVTK.Pages.Personal_cabinet"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Personal_cabinet">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Width="365" Height="519" Margin="50 0">
+                    <Ellipse x:Name="Avatar_eclipse" Width="355" Height="355" StrokeThickness="10" StrokeDashArray="4 2" StrokeDashCap="Round" Stroke="#6750A4">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Resources/Vector.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <Button materialDesign:ButtonAssist.CornerRadius="33" Width="291" Height="60" Margin="0 20">
+                        <Button.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#6750A4" Offset="0"/>
+                                <GradientStop Color="#DC7AFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Width="40" Height="40" Kind="Camera" Margin="8 0"/>
+                            <TextBlock Text="Загрузить фото" FontFamily="Roboto" FontSize="26" FontWeight="Medium" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Button BorderBrush="#D979FD" Background="Transparent" materialDesign:ButtonAssist.CornerRadius="33" Width="200" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Foreground="#6C52A8" Text="Удалить" FontFamily="Roboto" FontSize="26" FontWeight="Medium" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Vertical" Width="453" Height="530" Margin="50 0">
+                    <!--1-->
+                    <TextBlock Foreground="#6C52A8" Text="Фамилия" FontFamily="Roboto" FontSize="26" FontWeight="Light"/>
+                    <TextBox x:Name="Lastname_pcb" Height="50" FontFamily="Roboto" FontSize="26" FontWeight="Regular" IsReadOnly="True"/>
+                    <!--2-->
+                    <TextBlock  Foreground="#6C52A8" Text="Имя" FontFamily="Roboto" FontSize="26" FontWeight="Light" Margin="0 10 0 0"/>
+                    <TextBox x:Name="Name_pcb" Height="50" FontFamily="Roboto" FontSize="26" FontWeight="Regular" IsReadOnly="True"/>
+                    <!--3-->
+                    <TextBlock Foreground="#6C52A8" Text="Отчество" FontFamily="Roboto" FontSize="26" FontWeight="Light" Margin="0 10 0 0"/>
+                    <TextBox x:Name="Father_pcb" Height="50" FontFamily="Roboto" FontSize="26" FontWeight="Regular" IsReadOnly="True"/>
+                    <!--4-->
+                    <TextBlock Foreground="#6C52A8" Text="Группа" FontFamily="Roboto" FontSize="26" FontWeight="Light" Margin="0 10 0 0"/>
+                    <TextBox x:Name="Group_pcb" Height="50" FontFamily="Roboto" FontSize="26" FontWeight="Regular" IsReadOnly="True"/>
+
+                    <!--5-->
+                    <TextBlock Foreground="#6C52A8" Text="Решено задач" FontFamily="Roboto" FontSize="26" FontWeight="Regular" Margin="0 30 0 0"/>
+                    <ProgressBar Height="54" Minimum="0" Maximum="100" Value="25" Margin="0 20"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,500 @@
+﻿<Page x:Class="PracticumVTK.Pages.Types_of_values"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticumVTK.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="840" d:DesignWidth="1111"
+      Title="Types_of_values">
+
+    <Grid>
+        <Border Width="1111" Height="840" Background="White" CornerRadius="48">
+            <ScrollViewer Margin="0 40">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource Zagalovok_style}" Text="Типы данных"/>
+                    <TextBlock Style="{StaticResource Under_zglvck}" Text="int age = 33;"/>
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Как и во многих языках программирования, в C# есть своя система типов данных, которая используется для создания переменных. Тип данных определяет внутреннее представление данных, множество значений, которые может принимать объект, а также допустимые действия, которые можно применять над объектом.
+<LineBreak/>
+В языке C# есть следующие базовые типы данных:
+                    </TextBlock>
+                    
+                    <!--bool-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="bool:" FontWeight="Black"/>
+                        <Run Text="хранит значение true или false (логические литералы). Представлен системным типом System.Boolean:"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="bool" Foreground="Blue"/>
+                                    <Run Text="alive ="/>
+                                    <Run Text="true" Foreground="Blue"/>
+                                    <Run Text=";"/>
+                                    <LineBreak/>
+                                    <Run Text="bool" Foreground="Blue"/>
+                                    <Run Text="isDead ="/>
+                                    <Run Text="false" Foreground="Blue"/>
+                                    <Run Text=";"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--byte-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="byte:" FontWeight="Black"/>
+                        <Run Text="хранит целое число от 0 до 255 и занимает 1 байт. Представлен системным типом System.Byte"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="bit1 = 1;"/>
+                                    <LineBreak/>
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="bit2 = 102;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--sbyte-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="sbyte:" FontWeight="Black"/>
+                        <Run Text="хранит целое число от -128 до 127 и занимает 1 байт. Представлен системным типом System.SByte"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="sbyte" Foreground="Blue"/>
+                                    <Run Text="bit1 = -101;"/>
+                                    <LineBreak/>
+                                    <Run Text="byte" Foreground="Blue"/>
+                                    <Run Text="bit2 = 102;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--short-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="short:" FontWeight="Black"/>
+                        <Run Text="хранит целое число от -32768 до 32767 и занимает 2 байта. Представлен системным типом System.Int16"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="short" Foreground="Blue"/>
+                                    <Run Text="n1 = 1;"/>
+                                    <LineBreak/>
+                                    <Run Text="short" Foreground="Blue"/>
+                                    <Run Text="n2 = 102;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--ushort-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="ushort:" FontWeight="Black"/>
+                        <Run Text="хранит целое число от 0 до 65535 и занимает 2 байта. Представлен системным типом System.UInt16"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="ushort" Foreground="Blue"/>
+                                    <Run Text="n1 = 1;"/>
+                                    <LineBreak/>
+                                    <Run Text="ushort" Foreground="Blue"/>
+                                    <Run Text="n2 = 102;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--int-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="int:" FontWeight="Black"/>
+                        <Run Text="хранит целое число от -2147483648 до 2147483647 и занимает 4 байта. Представлен системным типом System.Int32. Все целочисленные литералы по умолчанию представляют значения типа int:"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="a = 10;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = 0b101;"/>
+                                    <Run Text="  // бинарная форма b =5" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="c = 0xFF;"/>
+                                    <Run Text="  // шестнадцатеричная форма c = 255" Foreground="Green"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--uint-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="uint:" FontWeight="Black"/>
+                        <Run Text="хранит целое число от 0 до 4294967295 и занимает 4 байта. Представлен системным типом System.UInt32"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="a = 10;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = 0b101;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="c = 0xFF;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--long-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="long:" FontWeight="Black"/>
+                        <Run Text="хранит целое число от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807 и занимает 8 байт. Представлен системным типом System.Int64"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="a = -10;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = 0b101;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="c = 0xFF;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--ulong-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="ulong:" FontWeight="Black"/>
+                        <Run Text="хранит целое число от 0 до 18 446 744 073 709 551 615 и занимает 8 байт. Представлен системным типом System.UInt64"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="a = 10;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="b = 0b101;"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="c = 0xFF;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--float-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="float:" FontWeight="Black"/>
+                        <Run Text="хранит число с плавающей точкой от -3.4*1038 до 3.4*1038 и занимает 4 байта. Представлен системным типом System.Single"/>
+                    </TextBlock>
+
+                    <!--double-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="double:" FontWeight="Black"/>
+                        <Run Text="хранит число с плавающей точкой от ±5.0*10-324 до ±1.7*10308 и занимает 8 байта. Представлен системным типом System.Double"/>
+                    </TextBlock>
+
+                    <!--decimal-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="decimal:" FontWeight="Black"/>
+                        <Run Text="хранит десятичное дробное число. Если употребляется без десятичной запятой, имеет значение от ±1.0*10-28 до ±7.9228*1028, может хранить 28 знаков после запятой и занимает 16 байт. Представлен системным типом System.Decimal"/>
+                    </TextBlock>
+
+                    <!--char-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="char:" FontWeight="Black"/>
+                        <Run Text="хранит одиночный символ в кодировке Unicode и занимает 2 байта. Представлен системным типом System.Char. Этому типу соответствуют символьные литералы:"/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="char" Foreground="Blue"/>
+                                    <Run Text="a ="/>
+                                    <Run Text="'A'" Foreground="Red"/>
+                                    <Run Text=";"/>
+                                    <LineBreak/>
+                                    <Run Text="char" Foreground="Blue"/>
+                                    <Run Text="b ="/>
+                                    <Run Text="'\x5A'" Foreground="Red"/>
+                                    <Run Text=";"/>
+                                    <LineBreak/>
+                                    <Run Text="char" Foreground="Blue"/>
+                                    <Run Text="c ="/>
+                                    <Run Text="'\u0420'" Foreground="Red"/>
+                                    <Run Text=";"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--string-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="string:" FontWeight="Black"/>
+                        <Run Text="хранит набор символов Unicode. Представлен системным типом System.String. Этому типу соответствуют строковые литералы."/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="hello ="/>
+                                    <Run Text="&quot;Hello&quot;" Foreground="Red"/>
+                                    <Run Text=";"/>
+                                    <LineBreak/>
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="word ="/>
+                                    <Run Text="&quot;World&quot;" Foreground="Red"/>
+                                    <Run Text=";"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <!--object-->
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        <Run Text="object:" FontWeight="Black"/>
+                        <Run Text="может хранить значение любого типа данных и занимает 4 байта на 32-разрядной платформе и 8 байт на 64-разрядной платформе. Представлен системным типом System.Object, который является базовым для всех других типов и классов .NET."/>
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="object" Foreground="Blue"/>
+                                    <Run Text="a = 22;"/>
+                                    <LineBreak/>
+                                    <Run Text="object" Foreground="Blue"/>
+                                    <Run Text="b = 3.14;"/>
+                                    <LineBreak/>
+                                    <Run Text="object" Foreground="Blue"/>
+                                    <Run Text="c ="/>
+                                    <Run Text="&quot;hello code&quot;" Foreground="Red"/>
+                                    <Run Text=";"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="Например, определим несколько переменных разных типов и выведем их значения на консоль:"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="string" Foreground="Blue"/>
+                                    <Run Text="name ="/>
+                                    <Run Text="&quot;Tom&quot;" Foreground="Red"/>
+                                    <Run Text=";"/>
+                                    <LineBreak/>
+                                    <Run Text="int" Foreground="Blue"/>
+                                    <Run Text="age = 32;"/>
+                                    <LineBreak/>
+                                    <Run Text="bool" Foreground="Blue"/>
+                                    <Run Text="IsEmployed ="/>
+                                    <Run Text="false" Foreground="Blue"/>
+                                    <Run Text=";"/>
+                                    <LineBreak/>
+                                    <Run Text="double" Foreground="Blue"/>
+                                    <Run Text="weight = 78.65;"/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;Имя: {name}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;Возраст: {age}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;Вес: {weight}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                    <LineBreak/>
+                                    <Run Text="Console.WriteLine($"/>
+                                    <Run Text="&quot;Работает: {isEmployed}&quot;" Foreground="Red"/>
+                                    <Run Text=");"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="Для вывода данных на консоль здесь применяется интерполяция: перед строкой ставится знак $ и после этого мы можем вводить в строку в фигурных скобках значения переменных. Консольный вывод программы:"/>
+                    <!--Console-->
+                    <Border Margin="20 0" Background="Black">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderBrush="White">
+                                <TextBlock Foreground="White" FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="Имя: Tom"/>
+                                    <LineBreak/>
+                                    <Run Text="Возраст: 33"/>
+                                    <LineBreak/>
+                                    <Run Text="Вес: 78,65"/>
+                                    <LineBreak/>
+                                    <Run Text="Работает: False"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock FontFamily="Roboto" FontSize="36" FontWeight="Medium" Margin="40 20" Text="Использование суффиксов" />
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="При присвоении значений надо иметь в виду следующую тонкость: все вещественные литералы (дробные числа) рассматриваются как значения типа double. И чтобы указать, что дробное число представляет тип float или тип decimal, необходимо к литералу добавлять суффикс: F/f - для float и M/m - для decimal."/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="float" Foreground="Blue"/>
+                                    <Run Text="a = 3.14F;"/>
+                                    <LineBreak/>
+                                    <Run Text="float" Foreground="Blue"/>
+                                    <Run Text="b = 30.6f;"/>
+                                    <LineBreak/>
+                                    <LineBreak/>
+                                    <Run Text="decimal" Foreground="Blue"/>
+                                    <Run Text="c = 1005.8M;"/>
+                                    <LineBreak/>
+                                    <Run Text="decimal" Foreground="Blue"/>
+                                    <Run Text="d = 334.8m;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="Подобным образом все целочисленные литералы рассматриваются как значения типа int. Чтобы явным образом указать, что целочисленный литерал представляет значение типа uint, надо использовать суффикс U/u, для типа long - суффикс L/l, а для типа ulong - суффикс UL/ul:"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="uint" Foreground="Blue"/>
+                                    <Run Text="a = 10U;"/>
+                                    <LineBreak/>
+                                    <Run Text="long" Foreground="Blue"/>
+                                    <Run Text="b = 20L;"/>
+                                    <LineBreak/>
+                                    <Run Text="ulong" Foreground="Blue"/>
+                                    <Run Text="c = 30UL;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+
+                    <TextBlock FontFamily="Roboto" FontSize="36" FontWeight="Medium" Margin="40 20" Text="Неявная типизация" />
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="Ранее мы явным образом указывали тип переменных, например, int x;. И компилятор при запуске уже знал, что x хранит целочисленное значение.
+Однако мы можем использовать и модель неявной типизации:"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="var hello ="/>
+                                    <Run Text="&quot;Hell to World&quot;" Foreground="Red"/>
+                                    <Run Text=";"/>
+                                    <LineBreak/>
+                                    <Run Text="var c = 20;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}">
+                        Для неявной типизации вместо названия типа данных используется ключевое слово var. Затем уже при компиляции компилятор сам выводит тип данных исходя из присвоенного значения. Так как по умолчанию все целочисленные значения рассматриваются как значения типа int, то поэтому в итоге переменная c будет иметь тип int. Аналогично переменной hello присваивается строка, поэтому эта переменная будет иметь тип string
+<LineBreak/>
+Эти переменные подобны обычным, однако они имеют некоторые ограничения.
+<LineBreak/>
+Во-первых, мы не можем сначала объявить неявно типизируемую переменную, а затем инициализировать:
+                    </TextBlock>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                <Run Text="// этот код работает" Foreground="Green"/>
+                                <LineBreak/>
+                                <Run Text="int" Foreground="Blue"/>
+                                <Run Text="a;"/>
+                                <LineBreak/>
+                                <Run Text="a = 20;"/>
+                                <LineBreak/>
+                                <Run Text="// этот код не работает" Foreground="Green"/>
+                                <LineBreak/>
+                                <Run Text="var c;"/>
+                                <LineBreak/>
+                                <Run Text="c= 20;"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="Во-вторых, мы не можем указать в качестве значения неявно типизируемой переменной null:"/>
+                    <!--Code-->
+                    <Border Margin="20 0" Background="#E9DDFF">
+                        <ScrollViewer>
+                            <Border Margin="20 0 0 0" Background="Transparent" BorderThickness="5 0 0 0" BorderBrush="LawnGreen">
+                                <TextBlock FontFamily="Roboto" FontSize="26" FontWeight="Light" TextWrapping="NoWrap">
+                                    <Run Text="// этот код не работает" Foreground="Green"/>
+                                    <LineBreak/>
+                                    <Run Text="var c=;"/>
+                                    <Run Text="null;" Foreground="Blue"/>
+                                </TextBlock>
+                            </Border>
+                        </ScrollViewer>
+                    </Border>
+
+                    <TextBlock Style="{StaticResource CustomTextBlockStyle}" Text="Так как значение null, то компилятор не сможет вывести тип данных."/>
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Back_btn_TOV" Click="Back_btn_TOV_Click" HorizontalAlignment="Left" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="40 20">
+                            <materialDesign:PackIcon Kind="ArrowBack" Width="50" Height="80"/>
+                        </Button>
+                        <Button x:Name="Next_btn_TOV" Click="Next_btn_TOV_Click" HorizontalAlignment="Right" Width="130" Height="80" materialDesign:ButtonAssist.CornerRadius="30" FontFamily="Roboto" FontSize="26" FontWeight="Medium" Margin="740 20">
+                            <materialDesign:PackIcon Kind="ArrowRight" Width="50" Height="80"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>
