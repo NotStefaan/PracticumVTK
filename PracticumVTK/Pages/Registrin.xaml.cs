@@ -114,7 +114,7 @@ namespace PracticumVTK.Pages
             img_str = new ImgToString();
             if (img_str != null)
             {
-                this.Avatar_string = img_str.ImageStr(); // Используйте this для обращения к полю класса
+                this.Avatar_string = img_str.ImageStr().ToString(); // Используйте this для обращения к полю класса
             }
             else
                 return;

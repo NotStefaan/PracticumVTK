@@ -62,13 +62,13 @@ namespace PracticumVTK.Data
 
         public User(string Username, string Lastname, string Fathername, string Groupname, string Password, string Avatar, string Email) 
         {
-            Username = username;
-            Lastname = lastname;
-            Fathername = fathername;
-            Groupname = groupname;
-            Password = password;
-            Avatar = avatar;
-            Email = email;
+            this.Username = Username;
+            this.Lastname = Lastname;
+            this.Fathername = Fathername;
+            this.Groupname = Groupname;
+            this.Password = Password;
+            this.Avatar = Avatar;
+            this.Email = Email;
         }
 
         public User(string username, string lastname, string fathername, string groupname, string password, string email)
